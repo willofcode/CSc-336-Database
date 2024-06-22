@@ -1,5 +1,8 @@
+-- CSc 336 : Intro to Database Systems
 -- Assignment #3
--- william Ng
+-- Student Name: William Ng
+-- Instructor Name: Prof. Sheng
+
 drop table student;
 create database EnrollmentSystem;
 use EnrollmentSystem;
