@@ -44,7 +44,20 @@ VALUES 	(1001, 001, 336000, 'A'),
 		(1002, 002, 342000, 'B+'),
         (1003, 003, 457000, 'A+');
 
+-- 1.6
+SELECT student.name AS StudentName, course.name AS CourseName
+FROM Enrollments
+JOIN student ON Enrollments.studentID = student.studentID
+JOIN course ON Enrollments.courseID = course.courseID;
 
+INSERT INTO course (courseID, name, credits)
+VALUES  (392000, 'Linear Algebra Vector Analysis',3),
+        (101000, 'Engineering Lab', 1);
 
+-- 1.7
+SELECT course.name AS CourseName, student.name AS StudentName
+FROM course
+LEFT JOIN Enrollments ON course.courseID = Enrollments.courseID
+LEFT JOIN student ON Enrollments.studentID = student.studentID;
 
 
